@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1tp9qr3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <decision id="lottery" name="Список сувениров" camunda:historyTimeToLive="0">
+    <decisionTable id="DecisionTable_071ma5q" hitPolicy="COLLECT">
+      <input id="Input_1" label="Участник" camunda:inputVariable="number">
+        <inputExpression id="InputExpression_1" typeRef="long">
+          <text>participant.number</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Приз" name="prizes" typeRef="string" />
+      <rule id="DecisionRule_1ry7ew2">
+        <inputEntry id="UnaryTests_1g0dyyh">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lspi6i">
+          <text>"Футболка XXL"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gtmdt5">
+        <inputEntry id="UnaryTests_07y51u8">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1atslsf">
+          <text>"Футболка XL"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c1fpvm">
+        <inputEntry id="UnaryTests_1vn04ib">
+          <text>3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1j2tjvo">
+          <text>"Футболка S"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19xrnnb">
+        <inputEntry id="UnaryTests_1o6ejw3">
+          <text>4,5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1keloiu">
+          <text>"Бандана"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oahh85">
+        <inputEntry id="UnaryTests_032dhm2">
+          <text>6,7</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_007q4ef">
+          <text>"Носки"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14egxg8">
+        <inputEntry id="UnaryTests_1kqgpnl">
+          <text>[1..10]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13q4srn">
+          <text>"Ручка"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0upudta">
+        <inputEntry id="UnaryTests_0p29oot">
+          <text>[1..10]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oy1uqj">
+          <text>"Блокнот"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0undc98">
+        <inputEntry id="UnaryTests_18hs9u9">
+          <text>[1..10]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15rdjhi">
+          <text>"Найлейки"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="lottery">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
