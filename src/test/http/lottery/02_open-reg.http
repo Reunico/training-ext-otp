@@ -1,0 +1,35 @@
+### 2.1 Получить информацию об имеющихся External Task и заблокировать его на выполнение
+GET {{url}}/external-task?processInstanceId={{processInstanceId}}&topicName=open-reg
+Content-Type: application/json
+
+> {%
+client.global.set("taskId", response.body[0].id)
+ %}
+###
+
+POST {{url}}/external-task/fetchAndLock
+Content-Type: application/json
+
+{
+  "workerId": "test",
+  "maxTasks": 2,
+  "userPriority": true,
+  "topics": [
+    {
+      "topicName": "open-reg",
+      "lockDuration": 10000
+    }
+  ]
+}
+
+> {%
+ client.global.set("taskId", response.body[0].id)
+ %}
+
+### 2.2 Завершить полученные External Task
+POST {{url}}/external-task/{{taskId}}/complete
+Content-Type: application/json
+
+{
+  "workerId": "test"
+}

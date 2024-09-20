@@ -1,0 +1,10 @@
+POST {{url}}/process-definition/key/parent/start
+Content-Type: application/json
+
+{
+  "variables": {
+      "operations": {
+        "value": [ "b", "b", "b"]
+      }
+  }
+}

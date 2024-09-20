@@ -99,6 +99,7 @@
       <bpmn:outgoing>Flow_09fslk9</bpmn:outgoing>
     </bpmn:serviceTask>
   </bpmn:process>
+  <bpmn:error id="Error_0zks8ej" name="openRegError" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="lottery">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
@@ -130,6 +131,7 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1l98ck4_di" bpmnElement="Activity_1ccvl97">
         <dc:Bounds x="790" y="200" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1swnjam_di" bpmnElement="Activity_1swnjam" isExpanded="true">
         <dc:Bounds x="940" y="80" width="690" height="340" />

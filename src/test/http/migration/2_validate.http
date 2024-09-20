@@ -1,0 +1,20 @@
+### Валидация плана миграции
+POST {{url}}/migration/validate
+Content-Type: application/json
+
+{
+  "sourceProcessDefinitionId": "Process_migration:1:07b48af3-7731-11ef-a9ba-528414104678",
+  "targetProcessDefinitionId": "Process_migration:2:1ff8b382-7731-11ef-a9ba-528414104678",
+  "instructions": [
+    {
+      "sourceActivityIds": [
+        "Activity_0m7cs7y"
+      ],
+      "targetActivityIds": [
+        "Activity_0m7cs7y"
+      ],
+      "updateEventTrigger": false
+    }
+  ],
+  "variables": null
+}

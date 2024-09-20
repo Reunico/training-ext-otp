@@ -28,7 +28,6 @@ public class Notify implements ExternalTaskHandler {
         Number chatId = externalTask.getVariable("chatId");
         String message = externalTask.getVariable("message");
         log.warn("=== Notify participant === {} {}", chatId, message);
-
         // notificationService.notify(chatId, message);
         externalTaskService.complete(externalTask);
 

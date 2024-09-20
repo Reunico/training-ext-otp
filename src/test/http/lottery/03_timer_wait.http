@@ -1,0 +1,15 @@
+### Отбор и завершение таймера
+
+GET {{url}}/job?processInstanceId={{processInstanceId}}&timers=true
+Content-Type: application/json
+
+
+> {%
+ client.global.set("jobId", response.body[0].id)
+%}
+
+###
+POST {{url}}/job/{{jobId}}/execute
+Content-Type: application/json
+
+{}

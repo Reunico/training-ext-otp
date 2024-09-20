@@ -20,7 +20,11 @@ public class OpenReg implements ExternalTaskHandler {
     @Override
     public void execute(ExternalTask externalTask, ExternalTaskService externalTaskService) {
         log.warn("===== Open Reg");
-        lotteryService.start();
-        externalTaskService.complete(externalTask);
+        try {
+            lotteryService.start();
+            externalTaskService.complete(externalTask);
+        } catch (Exception e) {
+            externalTaskService.handleBpmnError(externalTask, "openRegError");
+        }
     }
 }
